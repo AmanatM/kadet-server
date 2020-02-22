@@ -1,10 +1,14 @@
 const express = require('express')
 const app = express()
-
 const cors = require('cors')
+const path = require('path')
+const redirectToHTTPS = require('express-http-to-https').redirectToHTTPS
+
 app.use(cors())
 
-app.use(express.static('build'))
+
+app.use(express.static(path.join(__dirname, 'build')))
+app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301))
 
 
 let notes = [
@@ -29,14 +33,6 @@ let notes = [
 ]
 
 
-app.use (function (req, res, next) {
-  if (req.secure) {
-    next()
-  } else {
-    res.redirect('https://' + req.headers.host + req.url);
-  }
-})
-
 app.get('/api/', (req, res) => {
   res.send('<h1>Hello World!</h1>')
 })
@@ -57,9 +53,9 @@ app.get('/api/notes/:id', (request, response) => {
 })
 
 
-app.get('*', function(req, res) {
-  res.sendfile('./build/index.html');
-});
+app.get('*', (req,res) =>{
+  res.sendFile(path.join(__dirname+'/build/index.html'))
+})
 
 
 const unknownEndpoint = (request, response) => {
