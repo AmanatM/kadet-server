@@ -30,9 +30,9 @@ let notes = [
 
 
 if(process.env.NODE_ENV === 'production') {
-  http.get('*', function(req, res) {  
-    res.redirect('https://' + req.headers.host + req.url);
-  })
+  app.get("*", function(request, response){
+    response.redirect("https://" + request.headers.host + request.url);
+  });
 }
 
 
@@ -55,13 +55,6 @@ app.get('/api/notes/:id', (request, response) => {
       }
 })
 
-
-
-if(process.env.NODE_ENV === 'production') {
-  http.get('*', function(req, res) {  
-    res.redirect('https://' + req.headers.host + 'index.html');
-  })
-}
 
 app.get('*', function(req, res) {
   res.sendfile('./build/index.html');
