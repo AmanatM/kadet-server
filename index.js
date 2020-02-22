@@ -29,12 +29,13 @@ let notes = [
 ]
 
 
-if(process.env.NODE_ENV === 'production') {
-  app.get("*", function(request, response){
-    response.redirect("https://" + request.headers.host + request.url);
-  });
-}
-
+app.use (function (req, res, next) {
+  if (req.secure) {
+    next()
+  } else {
+    res.redirect('https://' + req.headers.host + req.url);
+  }
+})
 
 app.get('/api/', (req, res) => {
   res.send('<h1>Hello World!</h1>')
