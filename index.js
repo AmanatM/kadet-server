@@ -29,6 +29,16 @@ let notes = [
 ]
 
 
+if(process.env.NODE_ENV === 'production') {
+  app.get('/*',function(req,res,next){
+    if(req.headers['x-forwarded-proto']!='https')
+      res.redirect('https://kadet.herokuapp.com'+req.url)
+    else
+      next() /* Continue to other routes if we're not redirecting */
+  })
+}
+
+
 app.get('/api/', (req, res) => {
   res.send('<h1>Hello World!</h1>')
 })
