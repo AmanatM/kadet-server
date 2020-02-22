@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.js": "/static/js/main.f4b737c0.chunk.js",
+    "main.js.map": "/static/js/main.f4b737c0.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.830788a2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.830788a2.js.map",
+    "static/js/2.8eb126e9.chunk.js": "/static/js/2.8eb126e9.chunk.js",
+    "static/js/2.8eb126e9.chunk.js.map": "/static/js/2.8eb126e9.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.6fd0d63be2a9f04c7bdef482f98a52d3.js": "/precache-manifest.6fd0d63be2a9f04c7bdef482f98a52d3.js",
+    "service-worker.js": "/service-worker.js",
+    "static/js/2.8eb126e9.chunk.js.LICENSE.txt": "/static/js/2.8eb126e9.chunk.js.LICENSE.txt",
+    "static/media/contractors.svg": "/static/media/contractors.8f4f2217.svg",
+    "static/media/dealer_centers.svg": "/static/media/dealer_centers.c454b805.svg",
+    "static/media/dispatchers.svg": "/static/media/dispatchers.b4227c1e.svg",
+    "static/media/history.svg": "/static/media/history.5f44fc68.svg",
+    "static/media/logo.svg": "/static/media/logo.603d5388.svg",
+    "static/media/logout.svg": "/static/media/logout.9d6e7536.svg",
+    "static/media/maps.svg": "/static/media/maps.197c485d.svg",
+    "static/media/orders.svg": "/static/media/orders.3c2ea25c.svg",
+    "static/media/reports.svg": "/static/media/reports.473a3c99.svg",
+    "static/media/reviews.svg": "/static/media/reviews.d67a5f72.svg",
+    "static/media/settings.svg": "/static/media/settings.5f699bc7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.830788a2.js",
+    "static/js/2.8eb126e9.chunk.js",
+    "static/js/main.f4b737c0.chunk.js"
+  ]
+}
