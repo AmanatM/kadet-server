@@ -30,16 +30,16 @@ let notes = [
 ]
 
 
-  app.get('/', (req, res) => {
-    res.send('<h1>Hello World!</h1>')
-  })
-  
+app.get('/api/', (req, res) => {
+  res.send('<h1>Hello World!</h1>')
+})
 
-  app.get('/notes', (req, res) => {
-    res.json(notes)
-  })
 
-app.get('/notes/:id', (request, response) => {
+app.get('/api/notes', (req, res) => {
+  res.json(notes)
+})
+
+app.get('/api/notes/:id', (request, response) => {
     const id = +request.params.id
     const note = notes.find(note => note.id === id)
     if (note) {
@@ -47,26 +47,6 @@ app.get('/notes/:id', (request, response) => {
       } else {
         response.status(404).end()
       }
-})
-
-app.delete('/notes/:id', (request, response) => {
-    const id = Number(request.params.id)
-    notes = notes.filter(note => note.id !== id)
-
-    response.status(204).end()
-})
-
-app.post('/notes', (request, response) => {
-    const maxId = notes.length > 0
-      ? Math.max(...notes.map(n => n.id)) 
-      : 0
-  
-    const note = request.body
-    note.id = maxId + 1
-  
-    notes = notes.concat(note)
-  
-    response.json(note)
 })
 
 const unknownEndpoint = (request, response) => {
