@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.js": "/static/js/main.7acf832a.chunk.js",
-    "main.js.map": "/static/js/main.7acf832a.chunk.js.map",
+    "main.js": "/static/js/main.dfef07e1.chunk.js",
+    "main.js.map": "/static/js/main.dfef07e1.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.830788a2.js",
     "runtime-main.js.map": "/static/js/runtime-main.830788a2.js.map",
-    "static/js/2.10b010f8.chunk.js": "/static/js/2.10b010f8.chunk.js",
-    "static/js/2.10b010f8.chunk.js.map": "/static/js/2.10b010f8.chunk.js.map",
+    "static/js/2.aa43dca1.chunk.js": "/static/js/2.aa43dca1.chunk.js",
+    "static/js/2.aa43dca1.chunk.js.map": "/static/js/2.aa43dca1.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.06b9e1b1e5f1cc1541a4d5f77797f06a.js": "/precache-manifest.06b9e1b1e5f1cc1541a4d5f77797f06a.js",
+    "precache-manifest.e903fd3f14b6bed3a38c6b24d6a93a1b.js": "/precache-manifest.e903fd3f14b6bed3a38c6b24d6a93a1b.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.10b010f8.chunk.js.LICENSE.txt": "/static/js/2.10b010f8.chunk.js.LICENSE.txt",
+    "static/js/2.aa43dca1.chunk.js.LICENSE.txt": "/static/js/2.aa43dca1.chunk.js.LICENSE.txt",
+    "static/media/cards.svg": "/static/media/cards.d32e646f.svg",
     "static/media/contractors.svg": "/static/media/contractors.8f4f2217.svg",
     "static/media/dealer_centers.svg": "/static/media/dealer_centers.c454b805.svg",
     "static/media/dispatchers.svg": "/static/media/dispatchers.b4227c1e.svg",
     "static/media/history.svg": "/static/media/history.5f44fc68.svg",
+    "static/media/login_page_bg.jpg": "/static/media/login_page_bg.bcb6114e.jpg",
     "static/media/logo.svg": "/static/media/logo.603d5388.svg",
+    "static/media/logo_white.svg": "/static/media/logo_white.fc0af17d.svg",
     "static/media/logout.svg": "/static/media/logout.9d6e7536.svg",
-    "static/media/maps.svg": "/static/media/maps.197c485d.svg",
     "static/media/orders.svg": "/static/media/orders.3c2ea25c.svg",
     "static/media/reports.svg": "/static/media/reports.473a3c99.svg",
     "static/media/reviews.svg": "/static/media/reviews.d67a5f72.svg",
@@ -24,7 +26,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.830788a2.js",
-    "static/js/2.10b010f8.chunk.js",
-    "static/js/main.7acf832a.chunk.js"
+    "static/js/2.aa43dca1.chunk.js",
+    "static/js/main.dfef07e1.chunk.js"
   ]
 }
