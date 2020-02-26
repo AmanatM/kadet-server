@@ -1,32 +1,34 @@
 {
   "files": {
-    "main.js": "/static/js/main.dfef07e1.chunk.js",
-    "main.js.map": "/static/js/main.dfef07e1.chunk.js.map",
+    "main.js": "/static/js/main.792cb0da.chunk.js",
+    "main.js.map": "/static/js/main.792cb0da.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.830788a2.js",
     "runtime-main.js.map": "/static/js/runtime-main.830788a2.js.map",
-    "static/js/2.aa43dca1.chunk.js": "/static/js/2.aa43dca1.chunk.js",
-    "static/js/2.aa43dca1.chunk.js.map": "/static/js/2.aa43dca1.chunk.js.map",
+    "static/js/2.01007bf6.chunk.js": "/static/js/2.01007bf6.chunk.js",
+    "static/js/2.01007bf6.chunk.js.map": "/static/js/2.01007bf6.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.e903fd3f14b6bed3a38c6b24d6a93a1b.js": "/precache-manifest.e903fd3f14b6bed3a38c6b24d6a93a1b.js",
+    "precache-manifest.bdd3bffc05b81983a0abafae7d8ae2e5.js": "/precache-manifest.bdd3bffc05b81983a0abafae7d8ae2e5.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.aa43dca1.chunk.js.LICENSE.txt": "/static/js/2.aa43dca1.chunk.js.LICENSE.txt",
+    "static/js/2.01007bf6.chunk.js.LICENSE.txt": "/static/js/2.01007bf6.chunk.js.LICENSE.txt",
     "static/media/cards.svg": "/static/media/cards.d32e646f.svg",
     "static/media/contractors.svg": "/static/media/contractors.8f4f2217.svg",
     "static/media/dealer_centers.svg": "/static/media/dealer_centers.c454b805.svg",
     "static/media/dispatchers.svg": "/static/media/dispatchers.b4227c1e.svg",
     "static/media/history.svg": "/static/media/history.5f44fc68.svg",
-    "static/media/login_page_bg.jpg": "/static/media/login_page_bg.bcb6114e.jpg",
+    "static/media/loginBg.jpg": "/static/media/loginBg.f68449b4.jpg",
     "static/media/logo.svg": "/static/media/logo.603d5388.svg",
     "static/media/logo_white.svg": "/static/media/logo_white.fc0af17d.svg",
     "static/media/logout.svg": "/static/media/logout.9d6e7536.svg",
     "static/media/orders.svg": "/static/media/orders.3c2ea25c.svg",
     "static/media/reports.svg": "/static/media/reports.473a3c99.svg",
     "static/media/reviews.svg": "/static/media/reviews.d67a5f72.svg",
-    "static/media/settings.svg": "/static/media/settings.5f699bc7.svg"
+    "static/media/settings.svg": "/static/media/settings.5f699bc7.svg",
+    "static/media/waves.svg": "/static/media/waves.eea20e2d.svg",
+    "static/media/waves2.svg": "/static/media/waves2.ce743cb2.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.830788a2.js",
-    "static/js/2.aa43dca1.chunk.js",
-    "static/js/main.dfef07e1.chunk.js"
+    "static/js/2.01007bf6.chunk.js",
+    "static/js/main.792cb0da.chunk.js"
   ]
 }
