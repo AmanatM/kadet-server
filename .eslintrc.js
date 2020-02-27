@@ -17,5 +17,6 @@ module.exports = {
             "error",
             2
         ],
+        "eqeqeq": "error"
     }
 };
