@@ -21,14 +21,14 @@ app.get('/api/notes', (req, res) => {
 
 app.get('/api/notes/:id', (request, response, next) => {
   Note.findById(request.params.id)
-  .then(note => {
-    if (note) {
-      response.json(note.toJSON())
-    } else {
-      response.status(404).end() 
-    }
-  })
-  .catch(err => next(err))
+    .then(note => {
+      if (note) {
+        response.json(note.toJSON())
+      } else {
+        response.status(404).end()
+      }
+    })
+    .catch(err => next(err))
 })
 
 app.post('/api/notes', (request, response, next) => {
@@ -45,10 +45,10 @@ app.post('/api/notes', (request, response, next) => {
   })
 
   note.save()
-  .then(savedNote => {
-    response.json(savedNote.toJSON())
-  })
-  .catch(error => next(error))
+    .then(savedNote => {
+      response.json(savedNote.toJSON())
+    })
+    .catch(error => next(error))
 })
 
 app.delete('/api/notes/:id', (request, response, next) => {
@@ -97,20 +97,20 @@ const userRouter = require('./controllers/users.js')
 app.use('/api/users', userRouter)
 
 
-app.get('*', (req,res) =>{
-  res.sendFile(path.join(__dirname+'/build/index.html'))
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/build/index.html'))
 })
 
 
 const unknownEndpoint = (request, response) => {
   response.status(404).send({ error: 'unknown endpoint' })
 }
-  
-app.use(unknownEndpoint)
-  
 
-  
+app.use(unknownEndpoint)
+
+
+
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
+  console.log(`Server running on port ${PORT}`)
 })
