@@ -17,6 +17,7 @@ module.exports = {
             "error",
             2
         ],
-        "eqeqeq": "error"
+        "eqeqeq": "error",
+        "no-unused-vars": ["warn"]
     }
 };
