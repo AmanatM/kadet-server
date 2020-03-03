@@ -8,7 +8,9 @@ const bodyParser = require('body-parser')
 const middleware = require('./utils/middleware')
 const mongoose = require('mongoose')
 
-const notesRouter = require('./controllers/notes')
+const usersRoute = require('./controllers/users')
+const loginRouter = require('./controllers/login')
+
 
 
 
@@ -28,7 +30,8 @@ app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301))
 app.use(express.static(path.join(__dirname, 'build')))
 
 
-app.use('/api/notes', notesRouter)
+app.use('/api/users', usersRoute)
+app.use('/api/login', loginRouter)
 
 
 app.get('*', (req, res) => {
