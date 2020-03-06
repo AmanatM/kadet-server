@@ -5,13 +5,12 @@ const cors = require('cors')
 const path = require('path')
 const redirectToHTTPS = require('express-http-to-https').redirectToHTTPS
 const bodyParser = require('body-parser')
-const middleware = require('./utils/middleware')
+const middleware = require('./utils/middleware/middleware')
 const mongoose = require('mongoose')
 
-const usersRoute = require('./controllers/users')
+const usersRoute = require('./controllers/admins')
 const loginRouter = require('./controllers/login')
-
-
+const dispatcherRouter = require('./controllers/dispatchers')
 
 
 console.log('connecting to', config.MONGODB_URI)
@@ -32,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'build')))
 
 app.use('/api/users', usersRoute)
 app.use('/api/login', loginRouter)
+app.use('/api/dispatchers', dispatcherRouter)
 
 
 app.get('*', (req, res) => {
@@ -40,5 +40,6 @@ app.get('*', (req, res) => {
 
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
+
 
 module.exports = app
