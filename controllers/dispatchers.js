@@ -3,7 +3,7 @@ const Dispatcher = require('../models/dispatcher')
 
 const checkAuth = require('../utils/middleware/auth-check')
 
-dispatcherRouter.get('/', async (req, res, next) => {
+dispatcherRouter.get('/', checkAuth, async (req, res, next) => {
   const dispatchers = await Dispatcher.find({})
 
   res.json(dispatchers.map(dispatcher => dispatcher.toJSON()))
@@ -26,7 +26,9 @@ dispatcherRouter.post('/', checkAuth, async (req, res, next) => {
       username: body.username,
       name: body.name,
       surname: body.surname,
-      status: body.status
+      position: body.position,
+      status: body.status,
+      SIPNumber: body.SIPNumber
     })
 
     const savedDispatcher = await dispatcher.save()
@@ -35,6 +37,19 @@ dispatcherRouter.post('/', checkAuth, async (req, res, next) => {
   } catch (err) {
     next(err)
   }
+})
+
+dispatcherRouter.delete('/:id', checkAuth, async (req, res, next) => {
+  Dispatcher.findByIdAndRemove(req.params.id)
+    .then(() => {
+      res.status(200).json({
+        message: 'Deleted successfuly'
+      })
+      next()
+    })
+    .catch((err) => {
+      next(err)
+    })
 })
 
 

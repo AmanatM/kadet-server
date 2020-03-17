@@ -15,9 +15,32 @@ const dispatcherSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  position: {
+    type: String,
+    required: true
+  },
   status: {
     type: String,
     required: true
+  },
+  SIPNumber: {
+    type: Number,
+    minlength: 3,
+    required: true
+  },
+  //Extended
+  phoneNumber: {
+    type: Number,
+    minlength: 5
+  },
+  email: {
+    type: String
+  },
+  processedApplications: {
+    type: Number
+  },
+  jobStartedDate: {
+    type: Date
   }
 })
 

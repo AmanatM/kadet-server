@@ -24,7 +24,8 @@ usersRouter.post('/', async (request, response, next) => {
 })
 
 usersRouter.get('/', async (request, response) => {
-  const users = await User.find({}).populate('notes', { content: 1, date: 1 })
+  //const users = await User.find({}).populate('notes', { content: 1, date: 1 })
+  const users = await User.find({})
 
   response.json(users.map(u => u.toJSON()))
 })
