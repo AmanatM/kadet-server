@@ -13,7 +13,7 @@ dispatcherRouter.get('/:id', checkAuth, async (req, res, next) => {
   try {
     const dispatcher = await Dispatcher.findById(req.params.id)
     res.json(dispatcher)
-  } catch(err) {
+  } catch (err) {
     next(err)
   }
 })
@@ -38,6 +38,23 @@ dispatcherRouter.post('/', checkAuth, async (req, res, next) => {
     next(err)
   }
 })
+
+dispatcherRouter.patch("/:id", checkAuth, (req, res, next) => {
+  const updateOps = {};
+  for (const ops of req.body) {
+    updateOps[ops.propName] = ops.value;
+  }
+  Dispatcher.update({ _id: req.params.id }, { $set: updateOps })
+    .exec()
+    .then(result => {
+      res.status(200).json({
+        message: 'Updated successfuly'
+      });
+    })
+    .catch(err => {
+      next(err)
+    });
+});
 
 dispatcherRouter.delete('/:id', checkAuth, async (req, res, next) => {
   Dispatcher.findByIdAndRemove(req.params.id)
