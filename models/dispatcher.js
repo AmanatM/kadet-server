@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const uniqueValidator = require('mongoose-unique-validator')
+const mongoosePaginate = require('mongoose-paginate')
 
 const dispatcherSchema = new mongoose.Schema({
   username: {
@@ -55,6 +56,8 @@ dispatcherSchema.set('toJSON', {
 })
 
 dispatcherSchema.plugin(uniqueValidator)
+dispatcherSchema.plugin(mongoosePaginate)
+
 const Dispatcher = mongoose.model('Dispatcher', dispatcherSchema)
 
 module.exports = Dispatcher

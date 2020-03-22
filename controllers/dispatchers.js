@@ -4,9 +4,14 @@ const Dispatcher = require('../models/dispatcher')
 const checkAuth = require('../utils/middleware/auth-check')
 
 dispatcherRouter.get('/', checkAuth, async (req, res, next) => {
-  const dispatchers = await Dispatcher.find({})
+  const { page, limit } = req.query
+  const options = {
+    page: +page || 1,
+    limit: +limit || 10,
+  }
+  const dispatchers = await Dispatcher.paginate({}, options)
 
-  res.json(dispatchers.map(dispatcher => dispatcher.toJSON()))
+  res.json(dispatchers)
 })
 
 dispatcherRouter.get('/:id', checkAuth, async (req, res, next) => {
