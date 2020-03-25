@@ -1,26 +1,31 @@
 {
   "files": {
-    "main.js": "/static/js/main.744da217.chunk.js",
-    "main.js.map": "/static/js/main.744da217.chunk.js.map",
+    "main.js": "/static/js/main.84322cb2.chunk.js",
+    "main.js.map": "/static/js/main.84322cb2.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.830788a2.js",
     "runtime-main.js.map": "/static/js/runtime-main.830788a2.js.map",
-    "static/js/2.b04a1721.chunk.js": "/static/js/2.b04a1721.chunk.js",
-    "static/js/2.b04a1721.chunk.js.map": "/static/js/2.b04a1721.chunk.js.map",
+    "static/js/2.b3c836c2.chunk.js": "/static/js/2.b3c836c2.chunk.js",
+    "static/js/2.b3c836c2.chunk.js.map": "/static/js/2.b3c836c2.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b62d44e5db82b78d243e7ba3252a514e.js": "/precache-manifest.b62d44e5db82b78d243e7ba3252a514e.js",
+    "precache-manifest.5a911ca99d79982e2f98c708daa7c0f7.js": "/precache-manifest.5a911ca99d79982e2f98c708daa7c0f7.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.b04a1721.chunk.js.LICENSE.txt": "/static/js/2.b04a1721.chunk.js.LICENSE.txt",
+    "static/js/2.b3c836c2.chunk.js.LICENSE.txt": "/static/js/2.b3c836c2.chunk.js.LICENSE.txt",
+    "static/media/avatar_placeholder.svg": "/static/media/avatar_placeholder.44857d53.svg",
     "static/media/cards.svg": "/static/media/cards.d32e646f.svg",
+    "static/media/clock_icon.svg": "/static/media/clock_icon.72373f7c.svg",
     "static/media/close_icon.svg": "/static/media/close_icon.af3fb26e.svg",
     "static/media/contractors.svg": "/static/media/contractors.8f4f2217.svg",
     "static/media/dealer_centers.svg": "/static/media/dealer_centers.c454b805.svg",
     "static/media/dispatchers.svg": "/static/media/dispatchers.b4227c1e.svg",
+    "static/media/docs_icon.svg": "/static/media/docs_icon.8bdba33c.svg",
+    "static/media/email_icon.svg": "/static/media/email_icon.e6956db2.svg",
     "static/media/history.svg": "/static/media/history.5f44fc68.svg",
     "static/media/loginBg.jpg": "/static/media/loginBg.f68449b4.jpg",
     "static/media/logo.svg": "/static/media/logo.ed1c918b.svg",
     "static/media/logo_white.svg": "/static/media/logo_white.faebb83f.svg",
     "static/media/logout.svg": "/static/media/logout.9d6e7536.svg",
     "static/media/orders.svg": "/static/media/orders.3c2ea25c.svg",
+    "static/media/phone_icon.svg": "/static/media/phone_icon.581af562.svg",
     "static/media/reports.svg": "/static/media/reports.473a3c99.svg",
     "static/media/reviews.svg": "/static/media/reviews.d67a5f72.svg",
     "static/media/settings.svg": "/static/media/settings.5f699bc7.svg",
@@ -29,7 +34,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.830788a2.js",
-    "static/js/2.b04a1721.chunk.js",
-    "static/js/main.744da217.chunk.js"
+    "static/js/2.b3c836c2.chunk.js",
+    "static/js/main.84322cb2.chunk.js"
   ]
 }

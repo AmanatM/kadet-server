@@ -1,27 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a13084efb860a85947bf092d4654df29",
+    "revision": "3190d9262b2e3aaf5a59597abbeccda8",
     "url": "/index.html"
   },
   {
-    "revision": "38005f4cb3a060972419",
-    "url": "/static/js/2.b04a1721.chunk.js"
+    "revision": "59dfa56c972ce4e6ea13",
+    "url": "/static/js/2.b3c836c2.chunk.js"
   },
   {
     "revision": "928d7b5eb39d16fe9a880722c974b51e",
-    "url": "/static/js/2.b04a1721.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.b3c836c2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7913323eb8e9aa71580e",
-    "url": "/static/js/main.744da217.chunk.js"
+    "revision": "0a07b890a08d8b111d18",
+    "url": "/static/js/main.84322cb2.chunk.js"
   },
   {
     "revision": "df789f841de742fc7ba6",
     "url": "/static/js/runtime-main.830788a2.js"
   },
   {
+    "revision": "44857d53cc05c718838f40a99d681497",
+    "url": "/static/media/avatar_placeholder.44857d53.svg"
+  },
+  {
     "revision": "d32e646f9266daaa03fb72e74622db84",
     "url": "/static/media/cards.d32e646f.svg"
+  },
+  {
+    "revision": "72373f7c3992d2296a129fa73bdf4c3a",
+    "url": "/static/media/clock_icon.72373f7c.svg"
   },
   {
     "revision": "af3fb26e2dafdb0c43ce3db59992bdb1",
@@ -38,6 +46,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b4227c1e2872a64f7e8d5cb849db9267",
     "url": "/static/media/dispatchers.b4227c1e.svg"
+  },
+  {
+    "revision": "8bdba33c9dfbf15c6499d188cbad6d2c",
+    "url": "/static/media/docs_icon.8bdba33c.svg"
+  },
+  {
+    "revision": "e6956db22f6b55500046d41bb128484a",
+    "url": "/static/media/email_icon.e6956db2.svg"
   },
   {
     "revision": "5f44fc68478906e4af72424e5b2994dc",
@@ -62,6 +78,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3c2ea25c7dd0aec4d0e92e9553084336",
     "url": "/static/media/orders.3c2ea25c.svg"
+  },
+  {
+    "revision": "581af562c35a436d9fc57aafb8192f27",
+    "url": "/static/media/phone_icon.581af562.svg"
   },
   {
     "revision": "473a3c997fb2020932598b312bb490c9",

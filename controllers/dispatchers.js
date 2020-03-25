@@ -33,7 +33,11 @@ dispatcherRouter.post('/', checkAuth, async (req, res, next) => {
       surname: body.surname,
       position: body.position,
       status: body.status,
-      SIPNumber: body.SIPNumber
+      SIPNumber: body.SIPNumber,
+      phoneNumber: body.phoneNumber,
+      email: body.email,
+      processedApplications: body.processedApplications,
+      jobStartedDate: body.jobStartedDate
     })
 
     const savedDispatcher = await dispatcher.save()
