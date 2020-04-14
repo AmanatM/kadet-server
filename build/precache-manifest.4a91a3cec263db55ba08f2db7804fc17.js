@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d1ae70348c7279dee9642d2f5825fcdd",
+    "revision": "db9be7ff70c4f132e1bb6e3cfacc5a50",
     "url": "/index.html"
   },
   {
-    "revision": "2c8ebe603ddc807bbd37",
-    "url": "/static/js/2.7553f486.chunk.js"
+    "revision": "7f4e7629548f8f0d3b3d",
+    "url": "/static/js/2.6866a2b8.chunk.js"
   },
   {
     "revision": "0bdc4f0d8b3d84ae6a73bb9902b479ee",
-    "url": "/static/js/2.7553f486.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.6866a2b8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b648d2da592fc371dfe3",
-    "url": "/static/js/main.d16563c7.chunk.js"
+    "revision": "182c9686ea587e4116e5",
+    "url": "/static/js/main.500f9a93.chunk.js"
   },
   {
     "revision": "df789f841de742fc7ba6",
@@ -68,6 +68,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/edit.7f4f12d4.svg"
   },
   {
+    "revision": "e09b1d481ca59065b5825cd23397170a",
+    "url": "/static/media/email.e09b1d48.svg"
+  },
+  {
     "revision": "e6956db22f6b55500046d41bb128484a",
     "url": "/static/media/email_icon.e6956db2.svg"
   },
@@ -78,6 +82,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5f44fc68478906e4af72424e5b2994dc",
     "url": "/static/media/history.5f44fc68.svg"
+  },
+  {
+    "revision": "cb5d24f4646942a902db2b68ba0f8acd",
+    "url": "/static/media/language.cb5d24f4.svg"
   },
   {
     "revision": "f68449b4a9a10f932fd6e02362ecc465",
@@ -104,6 +112,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/orders.3c2ea25c.svg"
   },
   {
+    "revision": "3040424d44691b3f060744d0a9076fc8",
+    "url": "/static/media/password.3040424d.svg"
+  },
+  {
+    "revision": "3b8f4d9f104921d3795783a21ca6c7c4",
+    "url": "/static/media/phone.3b8f4d9f.svg"
+  },
+  {
     "revision": "581af562c35a436d9fc57aafb8192f27",
     "url": "/static/media/phone_icon.581af562.svg"
   },
@@ -122,6 +138,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5f699bc7da54c11e4fc37bcafcf87d3c",
     "url": "/static/media/settings.5f699bc7.svg"
+  },
+  {
+    "revision": "695359b33946a0b4ac1de0e7b8def08e",
+    "url": "/static/media/user.695359b3.svg"
   },
   {
     "revision": "eea20e2d9719ac7297129741b97b2019",
