@@ -8,6 +8,8 @@ const bodyParser = require('body-parser')
 const middleware = require('./utils/middleware/middleware')
 const mongoose = require('mongoose')
 const chalk = require('chalk')
+var compression = require('compression')
+app.use(compression())
 
 const usersRoute = require('./controllers/users')
 const loginRouter = require('./controllers/login')
