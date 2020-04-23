@@ -7,20 +7,22 @@ const redirectToHTTPS = require('express-http-to-https').redirectToHTTPS
 const bodyParser = require('body-parser')
 const middleware = require('./utils/middleware/middleware')
 const mongoose = require('mongoose')
+const chalk = require('chalk')
 
-const usersRoute = require('./controllers/admins')
+const usersRoute = require('./controllers/users')
 const loginRouter = require('./controllers/login')
 const dispatcherRouter = require('./controllers/dispatchers')
 
 
-console.log('connecting to', config.MONGODB_URI)
+
+console.log(chalk.yellow('Connecting to mongoDB'))
 
 mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(res => {
-    console.log('connected to MongoDB')
+    console.log(chalk.green.inverse('Connected to MongoDB'))
   })
   .catch((err) => {
-    console.log('error connecting to MongoDB:', err.message)
+    console.log(chalk.red.inverse('Error connecting to MongoDB:'), err.message)
   })
 
 app.use(bodyParser.json())
