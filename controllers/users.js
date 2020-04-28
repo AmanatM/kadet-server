@@ -1,7 +1,8 @@
 const bcrypt = require('bcrypt')
 const usersRouter = require('express').Router()
 const User = require('../models/users')
-const checkAuth = require('../utils/middleware/auth-check')
+const {checkAuth} = require('../utils/middleware/auth-check')
+const Dispatcher = require('../models/dispatcher')
 
 usersRouter.post('/', async (req, res, next) => {
   try {
@@ -38,7 +39,7 @@ usersRouter.get('/', checkAuth, async (req, res) => {
 usersRouter.get('/:id', checkAuth, async (req, res, next) => {
 
   try {
-    const user = await User.findById(req.params.id)
+    const user = await User.findById(req.params.id) || await Dispatcher.findById(req.params.id)
     res.json(user)
   } catch (err) {
     next(err)

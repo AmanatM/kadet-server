@@ -8,6 +8,10 @@ const dispatcherSchema = new mongoose.Schema({
     unique: true,
     required: true
   },
+  password: {
+    type: String,
+    required: true
+  },
   name: {
     type: String,
     required: true
@@ -50,8 +54,6 @@ dispatcherSchema.set('toJSON', {
     returnedObject.id = returnedObject._id.toString()
     delete returnedObject._id
     delete returnedObject.__v
-    // the passwordHash should not be revealed
-    delete returnedObject.passwordHash
   }
 })
 

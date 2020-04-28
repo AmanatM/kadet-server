@@ -2,14 +2,22 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const loginRouter = require('express').Router()
 const User = require('../models/users')
+const Dispatcher = require('../models/dispatcher')
 
 loginRouter.post('/', async (request, response) => {
   const body = request.body
 
-  const user = await User.findOne({ username: body.username })
-  const passwordCorrect = user === null
-    ? false
-    : await bcrypt.compare(body.password, user.passwordHash)
+  const user = await User.findOne({ username: body.username }) || await Dispatcher.findOne({ username: body.username })
+
+  let passwordCorrect
+
+  if (user.admin) {
+    passwordCorrect = user === null
+      ? false
+      : await bcrypt.compare(body.password, user.passwordHash)
+  } else {
+    passwordCorrect = user.password === body.password ? true : false
+  }
 
   if (!(user && passwordCorrect)) {
     return response.status(401).json({
@@ -19,6 +27,7 @@ loginRouter.post('/', async (request, response) => {
 
   const userForToken = {
     id: user._id,
+    username: user.username,
     admin: user.admin
   }
 

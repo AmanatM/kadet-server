@@ -14,6 +14,8 @@ app.use(compression())
 const usersRoute = require('./controllers/users')
 const loginRouter = require('./controllers/login')
 const dispatcherRouter = require('./controllers/dispatchers')
+const cardRouter = require('./controllers/cards')
+const serviceListRouter = require('./controllers/serviceList')
 
 
 
@@ -36,6 +38,8 @@ app.use(express.static(path.join(__dirname, 'build')))
 app.use('/api/users', usersRoute)
 app.use('/api/login', loginRouter)
 app.use('/api/dispatchers', dispatcherRouter)
+app.use('/api/cards', cardRouter)
+app.use('/api/serviceList', serviceListRouter)
 
 
 app.get('*', (req, res) => {

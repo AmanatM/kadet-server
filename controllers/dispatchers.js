@@ -1,29 +1,42 @@
 const dispatcherRouter = require('express').Router()
 const Dispatcher = require('../models/dispatcher')
+const jwt = require('jsonwebtoken')
+const chalk = require('chalk')
 
-const checkAuth = require('../utils/middleware/auth-check')
+const { checkAuth, checkAdmin } = require('../utils/middleware/auth-check')
 
-dispatcherRouter.get('/', checkAuth, async (req, res, next) => {
+dispatcherRouter.get('/', checkAdmin, async (req, res, next) => {
   const { page, limit } = req.query
+
   const options = {
     page: +page || 1,
-    limit: +limit || 10,
+    limit: +limit || 10
   }
-  const dispatchers = await Dispatcher.paginate({}, options)
 
-  res.json(dispatchers)
+  const token = req.headers.authorization.split(' ')[1]
+  const decoded = jwt.verify(token, process.env.JWT_KEY)
+
+  if (decoded.admin) {
+    const dispatchers = await Dispatcher.paginate({}, options)
+    res.json(dispatchers)
+  } else {
+    const dispatchers = await Dispatcher.paginate({}, options)
+    res.json(dispatchers)
+  }
+
 })
 
-dispatcherRouter.get('/:id', checkAuth, async (req, res, next) => {
+dispatcherRouter.get('/:id', checkAdmin, async (req, res, next) => {
   try {
     const dispatcher = await Dispatcher.findById(req.params.id)
     res.json(dispatcher)
+
   } catch (err) {
     next(err)
   }
 })
 
-dispatcherRouter.post('/', checkAuth, async (req, res, next) => {
+dispatcherRouter.post('/', checkAdmin, async (req, res, next) => {
   try {
     const body = req.body
 
@@ -36,8 +49,9 @@ dispatcherRouter.post('/', checkAuth, async (req, res, next) => {
       SIPNumber: body.SIPNumber,
       phoneNumber: body.phoneNumber,
       email: body.email,
+      password: body.password,
+      jobStartedDate: body.jobStartedDate,
       processedApplications: body.processedApplications,
-      jobStartedDate: body.jobStartedDate
     })
 
     const savedDispatcher = await dispatcher.save()
@@ -48,7 +62,7 @@ dispatcherRouter.post('/', checkAuth, async (req, res, next) => {
   }
 })
 
-dispatcherRouter.patch("/:id", checkAuth, (req, res, next) => {
+dispatcherRouter.patch("/:id", checkAdmin, (req, res, next) => {
   const updateOps = {};
   for (const ops of req.body) {
     updateOps[ops.propName] = ops.value;
@@ -65,7 +79,7 @@ dispatcherRouter.patch("/:id", checkAuth, (req, res, next) => {
     });
 });
 
-dispatcherRouter.delete('/:id', checkAuth, async (req, res, next) => {
+dispatcherRouter.delete('/:id', checkAdmin, async (req, res, next) => {
   Dispatcher.findByIdAndRemove(req.params.id)
     .then(() => {
       res.status(200).json({
