@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.9cfd8a2f.chunk.js",
-    "main.js.map": "/static/js/main.9cfd8a2f.chunk.js.map",
+    "main.js": "/static/js/main.6994bc5f.chunk.js",
+    "main.js.map": "/static/js/main.6994bc5f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.830788a2.js",
     "runtime-main.js.map": "/static/js/runtime-main.830788a2.js.map",
-    "static/js/2.faa7db77.chunk.js": "/static/js/2.faa7db77.chunk.js",
-    "static/js/2.faa7db77.chunk.js.map": "/static/js/2.faa7db77.chunk.js.map",
+    "static/js/2.ff871033.chunk.js": "/static/js/2.ff871033.chunk.js",
+    "static/js/2.ff871033.chunk.js.map": "/static/js/2.ff871033.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f0f4baf0455a93123ae5d97628d571d1.js": "/precache-manifest.f0f4baf0455a93123ae5d97628d571d1.js",
+    "precache-manifest.2f3da87cd76d9900bc41225d66279102.js": "/precache-manifest.2f3da87cd76d9900bc41225d66279102.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.faa7db77.chunk.js.LICENSE.txt": "/static/js/2.faa7db77.chunk.js.LICENSE.txt",
+    "static/js/2.ff871033.chunk.js.LICENSE.txt": "/static/js/2.ff871033.chunk.js.LICENSE.txt",
     "static/media/avatar.svg": "/static/media/avatar.6b4930a3.svg",
     "static/media/avatar_placeholder.svg": "/static/media/avatar_placeholder.44857d53.svg",
     "static/media/calendar.svg": "/static/media/calendar.097b68d4.svg",
@@ -23,12 +23,14 @@
     "static/media/docs_icon.svg": "/static/media/docs_icon.8bdba33c.svg",
     "static/media/email.svg": "/static/media/email.e09b1d48.svg",
     "static/media/email_icon.svg": "/static/media/email_icon.e6956db2.svg",
+    "static/media/error.svg": "/static/media/error.94d6ea3a.svg",
     "static/media/filter.svg": "/static/media/filter.98e0f043.svg",
     "static/media/loginBg.jpg": "/static/media/loginBg.f68449b4.jpg",
     "static/media/logo_white.svg": "/static/media/logo_white.faebb83f.svg",
     "static/media/logout.svg": "/static/media/logout.8fc6ae30.svg",
     "static/media/next.svg": "/static/media/next.a9239d43.svg",
     "static/media/no.svg": "/static/media/no.94d6ea3a.svg",
+    "static/media/ok.svg": "/static/media/ok.d6888d13.svg",
     "static/media/orders.svg": "/static/media/orders.354d4359.svg",
     "static/media/password.svg": "/static/media/password.3040424d.svg",
     "static/media/phone.svg": "/static/media/phone.3b8f4d9f.svg",
@@ -41,7 +43,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.830788a2.js",
-    "static/js/2.faa7db77.chunk.js",
-    "static/js/main.9cfd8a2f.chunk.js"
+    "static/js/2.ff871033.chunk.js",
+    "static/js/main.6994bc5f.chunk.js"
   ]
 }

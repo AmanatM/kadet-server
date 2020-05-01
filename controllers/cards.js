@@ -1,27 +1,9 @@
 const cardRouter = require('express').Router()
 const Card = require('../models/cards')
+const {checkAdmin, checkAuth} = require('../utils/middleware/auth-check')
 
 
-cardRouter.get('/', async (req, res, next) => {
-
-  const { page, limit } = req.query
-  const options = {
-    page: +page || 1,
-    limit: +limit || 10,
-  }
-  const cards = await Card.paginate({}, options)
-
-
-  const inactiveCards = {
-    ...cards,
-    docs: [...cards.docs.filter((card) => card.active === false)]
-  }
-
-
-  res.json(inactiveCards)
-})
-
-cardRouter.get('/active', async (req, res, next) => {
+cardRouter.get('/',checkAuth, async (req, res, next) => {
 
   const { page, limit } = req.query
   const options = {
@@ -33,25 +15,32 @@ cardRouter.get('/active', async (req, res, next) => {
   res.json(cards)
 })
 
-
 cardRouter.get('/:id', async (req, res, next) => {
   try {
-    const dispatcher = await Card.findById(req.params.id)
-    res.json(dispatcher)
+    const card = await Card.findById(req.params.id)
+    res.json(card)
   } catch (err) {
     next(err)
   }
 })
 
 
-cardRouter.get('/:id', async (req, res, next) => {
-  try {
-    const dispatcher = await Card.findById(req.params.id)
-    res.json(dispatcher)
-  } catch (err) {
-    next(err)
+cardRouter.patch("/:id", checkAuth, (req, res, next) => {
+  const updateOps = {};
+  for (const ops of req.body) {
+    updateOps[ops.propName] = ops.value;
   }
-})
+  Card.update({ _id: req.params.id }, { $set: updateOps })
+    .exec()
+    .then(result => {
+      res.status(200).json({
+        message: 'Updated successfuly'
+      });
+    })
+    .catch(err => {
+      next(err)
+    });
+});
 
 
 const getRandom = (length) => Math.floor(Math.pow(10, length - 1) + Math.random() * 9 * Math.pow(10, length - 1))
